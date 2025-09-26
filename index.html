@@ -36,10 +36,14 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li><a class="nav-link" href="#">About us</a></li>
-                <li><a class="nav-link" href="#">Services</a></li>
-                <li><a class="nav-link" href="#">Products</a></li>
-                <li><a class="nav-link" href="#">Contact us</a></li>
+               <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+    
+    <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+</ul>
+
             </ul>
         </div>
     </div>
@@ -113,7 +117,7 @@
 		<!-- End about section -->
 
 	<!-- Start Services Section -->
-<section class="py-5 bg-light section-spacing">
+<section id="services" class="py-5 bg-light section-spacing">
   <div class="container text-center">
     <h2 class="mb-3 fw-bold">All Under One Roof</h2>
 <p>We provide a complete range of furniture solutions from stylish new designs and expert repairs to convenient exchange options. Whether you need to upgrade, restore, or replace, everything you’re looking for is right here in one place.</p>
@@ -323,7 +327,7 @@
 
 		
 		 <!-- Product Section -->
-<div class="product-section section-spacing">
+<div id="products" class="product-section section-spacing">
   <div class="container">
     <div class="row mb-4">
       <div class="col-md-12">
@@ -517,7 +521,29 @@ categoryLinks.forEach(link => {
     });
   });
 });
+// Get all section IDs
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.custom-navbar .nav-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 90; // offset for sticky navbar
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
+
 </script>
+
 
 
 		<script src="js/bootstrap.bundle.min.js"></script>

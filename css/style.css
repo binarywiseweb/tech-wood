@@ -838,3 +838,10 @@ footer .btn-primary:hover {
     background-color: #444a8a;
     transform: translateY(-2px);
 }
+section {
+  scroll-margin-top: 80px; /* adjust to your navbar height (20px top + 20px bottom + ~40px logo/menu) */
+}
+#products {
+    scroll-margin-top: 70px; /* adjust to your navbar height */
+}
+
