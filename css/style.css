@@ -58,7 +58,7 @@ a {
       margin-right: 15px; } }
   .custom-navbar .custom-navbar-nav li a {
     font-weight: 500;
-    color: #ffffff !important;
+    color: #000 !important;
     opacity: .5;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
@@ -170,8 +170,8 @@ a {
   padding: 12px 30px;
   border-radius: 30px;
   color: #ffffff;
-  background: #001f54;
-  border-color: #001f54; }
+  background: #f9bf29;
+  border-color: #f9bf29; }
   .btn:hover {
     color: #ffffff;
     background: #222222;
@@ -763,9 +763,9 @@ textarea {
 }
 .category-link.active,
 .category-link:hover {
-  background-color: #004e89;
+  background-color: #f9bf29;
   color: #fff;
-  border-color: #004e89;
+  border-color:#f9bf29;
 }
 
 .product-card {
@@ -819,7 +819,7 @@ textarea {
 }
 
 .check-list li i {
-  color: #004e89;        /* Check mark color */
+  color: #f9bf29;        /* Check mark color */
   margin-right: 10px;    /* Space between icon and text */
 }
 
@@ -844,4 +844,8 @@ section {
 #products {
     scroll-margin-top: 70px; /* adjust to your navbar height */
 }
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
 
